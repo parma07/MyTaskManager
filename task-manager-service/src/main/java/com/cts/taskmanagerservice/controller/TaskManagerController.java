@@ -65,7 +65,7 @@ public class TaskManagerController {
 		Responce<Task> response;
 		try {
 			task=taskManagerService.getTask(task.getTaskId());
-			LOGGER.error(" getTask ==----------------------->", task);
+			LOGGER.info(" getTask ==----------------------->", task);
 			response= new Responce<Task>(task,"SUCCESS", "0");
 		}catch(Exception e) {
 			LOGGER.error("Error while persisting task data", e.toString());
